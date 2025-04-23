@@ -63,7 +63,7 @@ export default function TourLayout({
           />
         </div>
       )}
-      {/* <Navbar /> */}
+      <Navbar />
     </div>
   );
 }

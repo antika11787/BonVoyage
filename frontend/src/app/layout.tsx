@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ToastContainer } from "react-toastify";
 import StoreProvider from "@/Providers/storeProvider";
 import './globals.css';
-import Navbar from "@/components/molecules/navbar";
 
 export const metadata: Metadata = {
   title: "BonVoyage",
@@ -11,10 +10,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  isLayoutNotApplied,
 }: Readonly<{
   children: React.ReactNode;
-  isLayoutNotApplied?: boolean;
 }>) {
   return (
     <html>
@@ -27,7 +24,6 @@ export default function RootLayout({
             <div className="layout__footer">{/* <Footer /> */}</div>
           </div>
         </StoreProvider>
-        {!isLayoutNotApplied && <Navbar />}
       </body>
     </html>
   );
